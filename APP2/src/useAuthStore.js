@@ -12,7 +12,7 @@ const useAuthStore=create((set)=>({
         set({isLoadingUser:true})
         try {
             const res=await axiosInstance.get("/dashboard")
-            set({authUser:res.data.user,lucky_no:res.data.lucky_no})
+            set({authUser:res.data?.user,lucky_no:res.data?.lucky_no})
             toast.success(res.data.message)
         } catch (error) {
             toast.error(error.response.data.message)
@@ -24,7 +24,7 @@ const useAuthStore=create((set)=>({
         set({isLoggingUser:true})
         try {
             const res=await axiosInstance.post("/auth/login",user)
-            set({authUser:res.data.user,lucky_no:res.data.lucky_no})
+            set({authUser:res.data?.user,lucky_no:res.data?.lucky_no})
             toast.success("login successful")
         } catch (error) {
             toast.error(error.response.data.message)

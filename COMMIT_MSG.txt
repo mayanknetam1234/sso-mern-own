@@ -1,0 +1,12 @@
+# "docker file added"
+App1:-
+added .dockerignore , Dockerfile , nginx.conf
+nginx.conf makes sure that in frontend if some route like /login is not found then app should use index.html
+
+App2:-
+added .dockerignore , Dockerfile , nginx.conf
+nginx.conf makes sure that in frontend if some route like /login is not found then app should use index.html
+
+backend:-
+added .dockerignore , Dockerfile
+changes some feature of cookies

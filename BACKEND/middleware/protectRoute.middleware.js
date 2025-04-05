@@ -10,7 +10,7 @@ const protectRoute=(req,res,next)=>{
         req.user={...decode}
         next();
     } catch (error) {
-        res.status(400).json({message:"not authorized , login"})
+        res.status(400).json({message:"not authorized , login"})    
     }
 }
 

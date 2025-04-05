@@ -12,6 +12,7 @@ app.use(express.json())
 // ✅ CORS Configuration
 app.use(cors({
   origin: [/localhost:\d+$/], // Accepts requests from any localhost port
+  // origin: ["http://app1:5000", "http://app2:5001"],
   credentials: true           // ✅ Allows cookies to be sent
 }));
 app.use(cookieParser())
