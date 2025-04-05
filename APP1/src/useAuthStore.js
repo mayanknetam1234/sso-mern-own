@@ -12,6 +12,7 @@ const useAuthStore=create((set)=>({
         set({isLoadingUser:true})
         try {
             const res=await axiosInstance.get("/dashboard")
+            console.log("hiii",res)
             set({authUser:res.data.user,lucky_no:res.data.lucky_no})
             toast.success(res.data.message)
         } catch (error) {

@@ -22,7 +22,7 @@ function App() {
         <Loader/>
       </div>
     )
-    console.log(authUser)
+    console.log("hiii",authUser)
   return (
     <>
        <h1>Website 1</h1>
